@@ -1,11 +1,9 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 
-public class RandomPoints {
+public class MonteCarlo {
     private int howManyPoints;
-    RandomPoints(int howManyPoints) {
+    MonteCarlo(int howManyPoints) {
         this.howManyPoints = howManyPoints;
         calcPI();
 
@@ -38,7 +36,7 @@ public class RandomPoints {
             System.out.println("------------------------");
             System.out.println("USING " + i + " POINTS:");
             System.out.println("Real PI / Calculated:\n" + Math.PI);
-            new RandomPoints(i);
+            new MonteCarlo(i);
 
         }
 
