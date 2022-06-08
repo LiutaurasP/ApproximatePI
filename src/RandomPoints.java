@@ -5,38 +5,26 @@ import java.util.Random;
 
 public class RandomPoints {
     private int howManyPoints;
-    List<Vector2D> points;
-
     RandomPoints(int howManyPoints) {
         this.howManyPoints = howManyPoints;
-        points = new ArrayList<Vector2D>();
         calcPI();
 
     }
-
     private void calcPI() {
-        generateRandomPoints();
         int inPoints = 0;
-        Vector2D currentVector;
         for (int i = 0; i < howManyPoints; i++) {
-            currentVector = points.get(i);
-            if (Math.pow(currentVector.x, 2) + Math.pow(currentVector.y, 2) <= 25) {
+            if (Math.pow(randomizer(-100,100), 2) + Math.pow(randomizer(-100,100), 2) < 10000) {
                 inPoints++;
             }
         }
 
 
         double PI = ((double) inPoints / (double) howManyPoints) * 4;
-        System.out.println("Approx PI is: " + PI + " Real value: " + Math.PI);
-        System.out.println("It is off by " + Math.abs(PI - Math.PI) + " or " + (Math.abs(PI - Math.PI) / Math.PI) * 100 + "%");
+        System.out.println(PI);
+        //   System.out.println("It is off by " + Math.abs(PI - Math.PI) + " or " + (Math.abs(PI - Math.PI) / Math.PI) * 100 + "%");
     }
 
-    private void generateRandomPoints() {
 
-        for (int i = 0; i < howManyPoints; i++) {
-            points.add(new Vector2D(randomizer(-5, 5), randomizer(-5, 5)));
-        }
-    }
 
     // Source: https://www.baeldung.com/java-generating-random-numbers-in-range
     private double randomizer(double min, double max) {
@@ -46,11 +34,11 @@ public class RandomPoints {
 
 
     public static void main(String[] args) {
-        for (int i = 100_000; i <= 1_000_000; i+=100_000) {
+        for (int i = 100_000; i <= 10_000_000; i += 100_000) {
             System.out.println("------------------------");
-            System.out.println("USING "+ i + " POINTS:");
-            RandomPoints test = new RandomPoints(i);
-            System.out.println("------------------------");
+            System.out.println("USING " + i + " POINTS:");
+            System.out.println("Real PI / Calculated:\n" + Math.PI);
+            new RandomPoints(i);
 
         }
 
