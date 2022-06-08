@@ -46,7 +46,7 @@ public class RandomPoints {
 
 
     public static void main(String[] args) {
-        for (int i = 1_000_000; i <= 100_000_000; i+=1_000_000) {
+        for (int i = 100_000; i <= 1_000_000; i+=100_000) {
             System.out.println("------------------------");
             System.out.println("USING "+ i + " POINTS:");
             RandomPoints test = new RandomPoints(i);
