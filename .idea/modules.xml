@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ApproximatePI.iml" filepath="$PROJECT_DIR$/.idea/ApproximatePI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ComputePI.iml" filepath="$PROJECT_DIR$/.idea/ComputePI.iml" />
     </modules>
   </component>
 </project>

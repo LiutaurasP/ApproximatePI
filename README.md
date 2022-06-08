@@ -1,2 +1,2 @@
-# ApproximatePI
-In this repo I will try different approches to approximate PI value.
+# ComputePI
+In this repository you will find couple of ways to compute or 
