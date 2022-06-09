@@ -44,7 +44,11 @@ public class Chudnovsky {
 
     public static void main(String[] args) {
         Chudnovsky test = new Chudnovsky(1000);
+        long startTime = System.nanoTime();
         BigDecimal PI = test.calculatePI();
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime);
+        System.out.println(duration/1000000);
         System.out.println(PI);
     }
 
